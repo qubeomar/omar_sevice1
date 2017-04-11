@@ -1,0 +1,30 @@
+id: dbcc3056-0261-4cfd-b0f4-54582b0a4f1b
+name: omar_sevice1
+apptype: api
+language: python
+toolchain:
+  id: 58ed21e79839e20021c7ca39
+  name: Qubeship-Python-Toolchain
+opinion:
+  id: 58dee5e3e2a801000e8cb43b
+  name: build_bake_test_deployment:v0.1
+endpoint:
+  id: 58ed21e899fd82000b7230e5
+  name: Qubeship Sandbox Cluster
+  type: target
+variables:
+   - name: APP_VERSION
+     value: v1.0
+security:
+  keys_loc: "conf/"
+build:
+  skip: false
+bake:
+  skip: true
+test:
+  skip: true
+deploy_to_qa:
+  skip: true
+deploy_to_prod:
+  skip: true
+
