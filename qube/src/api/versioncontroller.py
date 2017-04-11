@@ -4,7 +4,7 @@ Add docstring here
 """
 from flask_restful_swagger_2 import Resource, swagger
 
-from qube.src.api.swagger_models.hello import VersionModel
+from qube.src.api.swagger_models.omar_sevice1 import VersionModel
 from qube.src.api.swagger_models.response_messages import \
     ErrorModel, response_msgs
 from qube.src.commons.log import Log as LOG
@@ -13,20 +13,20 @@ from qube.src.commons.qube_config import QubeConfig
 EMPTY = ''
 
 
-class HelloItemVersionController(Resource):
+class omar_sevice1ItemVersionController(Resource):
     def __init__(self, *args, **kwargs):
-        super(HelloItemVersionController, self).__init__(*args, **kwargs)
+        super(omar_sevice1ItemVersionController, self).__init__(*args, **kwargs)
         self.config = QubeConfig.get_config()
 
     @swagger.doc(
         {
-            'tags': ['Hello'],
-            'description': 'Hello Version operation',
+            'tags': ['omar_sevice1'],
+            'description': 'omar_sevice1 Version operation',
             'responses': response_msgs
         }
     )
     def get(self):
-        """gets an hello item that omar has changed
+        """gets an omar_sevice1 item that omar has changed
         """
         try:
             LOG.debug("Get version ")
